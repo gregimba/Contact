@@ -1,5 +1,8 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
+  username = "grant"
+  password = "secret"
+  http_basic_authenticate_with name: username, password: password
 
   # GET /people
   # GET /people.json
